@@ -32,9 +32,9 @@ const HostTournament = () => {
   };
 
   return (
-    <div className='bg-gradient-to-r from-black from-50% via-blue-900 to-black'>
+    <div className='bg-gray-900'>
     <Navbar />
-    <div className="max-w-md mx-auto my-8 p-6 bg-gray-800 rounded-lg shadow-lg text-white">
+    <div className="max-w-md mx-auto my-8 p-6 bg-gradient-to-b from-black to-blue-900 rounded-lg shadow-lg text-white">
       <h2 className="text-2xl mb-4">Host a Tournament</h2>
       <form onSubmit={handleSubmit}>
         {step === 1 && (

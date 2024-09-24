@@ -133,7 +133,7 @@ const MultiStageForm = () => {
             )}
 
             {step === 2 && (
-              <div className="space-y-4 pt-6">
+              <div className="space-y-2 pt-6">
                 <h2 className="text-xl font-bold">User Type</h2>
                 <select
                   name="userType"
@@ -147,6 +147,7 @@ const MultiStageForm = () => {
                 </select>
 
                 {formData.userType === 'Player' && (
+                  
                   <button
                     type="button"
                     onClick={handleNext}
@@ -154,9 +155,11 @@ const MultiStageForm = () => {
                   >
                     Next
                   </button>
+                  
                 )}
 
                 {formData.userType === 'Audience' && (
+                  
                   <button
                     type="submit"
                     className="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
@@ -164,7 +167,7 @@ const MultiStageForm = () => {
                     Submit
                   </button>
                 )}
-
+                
                 <button
                   type="button"
                   onClick={handlePrevious}
@@ -172,6 +175,7 @@ const MultiStageForm = () => {
                 >
                   Previous
                 </button>
+                
               </div>
             )}
 

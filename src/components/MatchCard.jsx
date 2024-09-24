@@ -1,4 +1,3 @@
-// MatchCard.jsx
 import React from 'react';
 
 const MatchCard = ({ status, teamA, teamB, overview }) => {
@@ -9,7 +8,7 @@ const MatchCard = ({ status, teamA, teamB, overview }) => {
     'text-blue-500'; // For Upcoming
 
   return (
-    <div className="relative flex flex-col my-6 bg-gradient-to-r from-black from-50% via-blue-900 to-black shadow-sm border border-slate-200 rounded-lg w-96">
+    <div className="relative flex flex-col my-6 bg-slate-900 shadow-lg border border-slate-200 rounded-lg overflow-hidden"> {/* Added overflow-hidden */}
       <div className="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
         <span className={`text-sm font-medium ${headerColor}`}>
           {status === 'Ongoing' ? 'Live Match' : status === 'Ended' ? 'Match Ended' : 'Upcoming Match'}
@@ -17,7 +16,7 @@ const MatchCard = ({ status, teamA, teamB, overview }) => {
       </div>
 
       <div className="p-4 flex-1"> {/* Flex grow to occupy available space */}
-        <h5 className="mb-2 text-white text-xl font-semibold">
+        <h5 className="mb-2 text-white text-lg sm:text-xl font-semibold"> {/* Responsive font size */}
           {teamA} vs {teamB}
         </h5>
         <p className="text-white leading-normal font-light">
