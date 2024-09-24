@@ -1,23 +1,19 @@
-
-import './App.css';
-import LandingPage from './components/LandingPage';
-import MultiStageForm from './components/MultiStageForm';
+import React from 'react';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/LandingPage';
+import Register from './components/MultiStageForm';
 import HostTournament from './components/HostTournament';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      
-      <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/form" element={<MultiStageForm />} /> 
-          <Route path="/host-tournament" element={<HostTournament />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/host-tournament" element={<HostTournament />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
