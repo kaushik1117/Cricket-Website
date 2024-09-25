@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MenuIcon, XIcon } from '@heroicons/react/outline'; // Icons from Heroicons (You might need to install heroicons)
-
+import logo from '../assets/logo.png';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
         {/* Logo */}
         <div className="logo">
-          <h1 className="text-xl font-bold text-white">CricketLeague</h1>
+          <Link to="/" className="text-xl font-bold text-white"><img className='h-12 w-12 rounded-full'src={logo} /></Link>
         </div>
 
         {/* Hamburger Menu Icon for Mobile */}

@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MatchCard = ({ status, teamA, teamB, overview }) => {
+
+const MatchCard = ({ status, teamA, teamB, overview, id}) => {
   // Determine header color based on status
   const headerColor =
     status === 'Ongoing' ? 'text-green-500' : 
@@ -25,9 +27,8 @@ const MatchCard = ({ status, teamA, teamB, overview }) => {
       </div>
 
       <div className="mx-3 border-t border-slate-200 pb-3 pt-2 px-1 h-16"> {/* Fixed height for the footer */}
-        <span className="text-sm text-white font-medium">
-          Last updated: {new Date().toLocaleTimeString()} {/* Example timestamp */}
-        </span>
+        
+        <Link to="/matches" className="hover:text-gray-300 text-white">View Scorecard</Link>
       </div>
     </div>
   );
